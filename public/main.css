@@ -77,12 +77,10 @@ select {
 }
 
 #forecast-list {
-  padding: 4px;
   width: 100%;
 }
 
 #welcome {
-  padding: 4px;
   width: 100%;
   margin-top: 75px;
 }

@@ -2,7 +2,7 @@
 
 A simple weather app written in [Elm](https://elm-lang.org).
 
-The website files are located under the `public` directory, except for the `main.js` file that should be compiled.
+The website files are located under the `public` directory, except for the `main.js` file that should be compiled. Some static data can be customized in the `static.js` file, which is eagerly checked when loading the app.
 
 # Development setup and usage
 
@@ -41,4 +41,4 @@ npm run server
 
 * Responsive design.
 * Host a demo.
-* Document the static data, and a command to validate it.
+* `npm` command to validate the static data.
