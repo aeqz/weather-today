@@ -24,21 +24,26 @@ npm run build-check
 # Run the tests
 npm run test
 
+# Start a development server with hot reloading and debugger
+npm run server-dev
+
+# Start a server with the optimized version
+npm run server
+
 # Format the Elm code
 npm run format
 
 # Check if some Elm file should be formatted
 npm run format-check
 
-# Start a development server with hot reloading and debugger
-npm run server-dev
+# Check if the website static data is valid
+npm run static-data-check
 
-# Start a server with the optimized version
-npm run server
+# Run all checks: build, format, static data and test
+npm run every-check
 ```
 
 ## TODO
 
 * Responsive design.
 * Host a demo.
-* `npm` command to validate the static data.

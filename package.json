@@ -5,6 +5,7 @@
   "author": "Adrián Enríquez Ballester",
   "license": "ISC",
   "scripts": {
+    "every-check": "npm run build-check && npm run format-check && npm run static-data-check && npm run test",
     "build": "elm make src/Main.elm --output=public/main.js --optimize && uglifyjs public/main.js --compress 'pure_funcs=[F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9],pure_getters,unsafe_comps,unsafe' --mangle 'reserved=[F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9]' --output public/main.min.js && mv public/main.min.js public/main.js",
     "build-check": "elm make src/Main.elm --output=/dev/null",
     "build-dev": "elm make src/Main.elm --output=public/main.js --debug",
@@ -12,6 +13,7 @@
     "format-check": "elm-format src/ tests/ --validate",
     "server": "npm run build && elm-live -e node_modules/.bin/elm -d public -o --no-reload -- src/Main.elm --output=/dev/null",
     "server-dev": "elm-live -e node_modules/.bin/elm -d public -h -o -- src/Main.elm --output=public/main.js --debug",
+    "static-data-check": "npm run build-dev && node scripts/static-data-check.js",
     "test": "elm-test"
   },
   "devDependencies": {
