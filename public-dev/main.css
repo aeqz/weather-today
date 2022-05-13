@@ -120,3 +120,31 @@ select {
   margin: 0;
   margin-top: 4px;
 }
+
+@media only screen and (max-width: 370px) {
+  body {
+    padding-top: 140px;
+  }
+
+  #header {
+    flex-direction: column-reverse;
+  }
+
+  #header>div {
+    width: unset;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  #welcome {
+    margin-top: 50px;
+  }
+
+  #welcome>div {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  #forecast-list>ul>li {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}

@@ -1,5 +1,4 @@
 /node_modules/
 /elm-stuff/
-/public/main.js
-/public/main.min.js
+/public-dev/main.js
 .DS_Store

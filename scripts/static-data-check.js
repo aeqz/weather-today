@@ -2,8 +2,8 @@ const { readFileSync } = require('fs');
 
 ((warn, load) => {
   console.warn = () => undefined;
-  load('./public/main.js');
-  load('./public/static.js');
+  load('./public-dev/main.js');
+  load('./public-dev/static.js');
   console.warn = warn;
 })(
   console.warn,
