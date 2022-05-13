@@ -1,6 +1,6 @@
 # Weather today
 
-A simple weather app written in [Elm](https://elm-lang.org).
+A simple weather app written in [Elm](https://elm-lang.org). A demo is available in [adrianen-ucm.github.io/weather-today](https://adrianen-ucm.github.io/weather-today/).
 
 The website files for development are located under the `public-dev` directory, except for the `main.js` file that should be compiled. Some static data can be customized in the `static.js` file, which is eagerly checked when loading the app.
 
@@ -44,7 +44,3 @@ npm run static-data-check
 # Run all checks: build, format, static data and test
 npm run every-check
 ```
-
-## TODO
-
-* Host a demo.
