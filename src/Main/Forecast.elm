@@ -125,12 +125,11 @@ getForecast { apiKey, language, lat, lon } =
         { url =
             Url.crossOrigin
                 "https://api.openweathermap.org"
-                [ "data", "2.5", "onecall" ]
+                [ "data", "2.5", "forecast" ]
                 [ Url.string "lat" <| fromFloat lat
                 , Url.string "lon" <| fromFloat lon
                 , Url.string "appid" apiKey
                 , Url.string "units" "metric"
-                , Url.string "exclude" "current,minutely,daily,alerts"
                 , Url.string "lang" <| languageApiCode language
                 ]
         , expect = Http.expectJson identity forecastDecoder
@@ -139,7 +138,7 @@ getForecast { apiKey, language, lat, lon } =
 
 forecastDecoder : D.Decoder Forecast
 forecastDecoder =
-    D.field "hourly" <|
+    D.field "list" <|
         D.list weatherDecoder
 
 
@@ -150,7 +149,7 @@ weatherDecoder =
         (D.field "dt" <| D.int)
         (D.field "weather" <| first <| D.field "icon" D.string)
         (D.field "weather" <| first <| D.field "description" D.string)
-        (D.field "temp" <| D.float)
+        (D.field "main" <| D.field "temp" <| D.float)
 
 
 languageApiCode : Language -> String
