@@ -44,8 +44,8 @@ modelFuzzer =
             , cityForecast = cityForecast
             }
         )
-        (F.tuple3 ( F.string, zoneFuzzer, F.list cityFuzzer ))
-        (F.tuple3 ( literalsFuzzer, languageFuzzer, F.string ))
+        (F.triple F.string zoneFuzzer (F.list cityFuzzer))
+        (F.triple literalsFuzzer languageFuzzer F.string)
     <|
         F.maybe <|
             F.map2
